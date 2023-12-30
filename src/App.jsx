@@ -50,7 +50,7 @@ function App() {
       <section className=" w-screen p-2 bg-blue-700">
         <div className="flex flex-wrap justify-around items-center">
           <div className="p-1">
-            <img src="../public/aura.jpg" alt="aura" className=" w-14 h-14 border rounded-full" />
+            <img src="/aura.jpg" alt="aura" className=" w-14 h-14 border rounded-full" />
           </div>
           <div className="p-1">
             <a href="#about" className=" mr-2.5 sm:mr-10 text-white font-semibold hover:text-yellow-400 text-lg hover:underline">
@@ -74,7 +74,7 @@ function App() {
           </div>
           <div className="flex flex-wrap justify-evenly items-center gap-3 mt-10">
             <div className={cek ? "show" : ""} style={{ opacity: 0 }}>
-              <img src="../public/aura.jpg" alt="aura" className=" w-80 h-80 m-auto border rounded-b-lg shadow-lg hover:shadow-orange-700" />
+              <img src="/aura.jpg" alt="aura" className=" w-80 h-80 m-auto border rounded-b-lg shadow-lg hover:shadow-orange-700" />
             </div>
             <div className=" p-1">
               <p>Haii Saya Aura</p>
