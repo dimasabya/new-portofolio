@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+*, body {
+  scroll-behavior: smooth;
+}
+
+.show {
+  opacity: 0;
+  animation: showimg 5s ease-in-out .5s forwards;
+}
+
+@keyframes showimg {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateY(-25px);
+  }
+
+  75% {
+    opacity: 0.8;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#parax1, #parax2, #parax3, #parax4, #parax5 {
+  transition: transform .3s ease-out;
+}
+
+.paralax-inner {
+  transition: transform .3s ease-out;
+}
+
+.paralax-icon.show .paralax-inner {
+  transform: translateY(-50%);
+}
