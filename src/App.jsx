@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -7,11 +8,11 @@ function App() {
   const [offsets, setOffsets] = useState({});
 
   const element = [
-    { id: "parax1", icon: "fa-square-js", label: "javascript", color: "text-green-500", hover: "text-green-700" },
-    { id: "parax2", icon: "fa-node", label: "node js", color: "text-green-500", hover: "text-green-700" },
-    { id: "parax3", icon: "fa-square-github", label: "github", hover: "text-gray-700" },
-    { id: "parax4", icon: "fa-react", label: "react", color: "text-blue-600", hover: "text-blue-700" },
-    { id: "parax5", icon: "fa-laravel", label: "laravel", color: "text-red-600", hover: "text-red-700" },
+    { id: "parax1", icon: "fa-square-js", label: "javascript", w: "w-10/12", color: "text-green-500", hover: "text-green-700" },
+    { id: "parax2", icon: "fa-node", label: "node js", w: "w-5/12", color: "text-green-500", hover: "text-green-700" },
+    { id: "parax3", icon: "fa-square-github", label: "github", w: "w-10/12", hover: "text-gray-700" },
+    { id: "parax4", icon: "fa-react", label: "react", w: "w-8/12", color: "text-blue-600", hover: "text-blue-700" },
+    { id: "parax5", icon: "fa-laravel", label: "laravel", w: "w-2/12", color: "text-red-600", hover: "text-red-700" },
   ];
 
   useEffect(() => {
@@ -93,13 +94,13 @@ function App() {
             <div className="mt-2 p-2">
               <h3>Tech yang di dikuasai:</h3>
               <div className="flex flex-col gap-3 justify-start mt-4 p-2">
-                {element.map(({ id, icon, label, color, hover }) => {
+                {element.map(({ id, icon, label, color, hover, w }) => {
                   return (
                     <div className={`grid grid-cols-3 paralax-icon ${isVisible ? "show" : ""}`} style={{ transform: `translateY(${offsets["id"] * 0.3}px)` }} id={id} key={id}>
                       <i className={`fa-brands ${icon}  text-5xl ${color}  hover:${hover}`}>
                         <p className=" text-xs">{label}</p>
                       </i>
-                      <div className=" w-10/12 h-2 bg-blue-700 hover:bg-blue-900 my-auto ml-2 paralax-inner">
+                      <div className={`${w} h-2 bg-blue-700 hover:bg-blue-900 my-auto ml-2 paralax-inner`}>
                         <div className="mt-3 px-1 py-1"></div>
                       </div>
                     </div>
