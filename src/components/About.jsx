@@ -14,7 +14,7 @@ const About = () => {
   return (
     <section id="about" className="w-screen p-2 bg-white h-screen text-center mt-4">
       <div className="mt-10">
-        <h1 className="w-full font-bold text-5xl">About</h1>
+        <h1 className="w-full font-bold text-5xl">About Me</h1>
         <div className=" w-4/12 h-2 bg-blue-700 m-auto">
           <div className="mt-3 px-1 py-1"></div>
         </div>
