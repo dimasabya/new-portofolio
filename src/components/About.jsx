@@ -78,11 +78,11 @@ const About = () => {
               My CV <i className="fa-solid fa-download hover:text-red-400 delay-[.3s] ease-in"></i>
             </button>
             <div data-aos="slide-up" data-aos-duration="1000" className="mt-2">
-              <i className="fa-brands fa-square-instagram text-2xl md:text-3xl mx-2 my-2 hover:scale-125"></i>
-              <i className="fa-brands fa-square-facebook text-2xl md:text-3xl mx-2 my-2 hover:scale-125"></i>
-              <i className="fa-brands fa-square-twitter text-2xl md:text-3xl mx-2 my-2 hover:scale-125"></i>
-              <i className="fa-brands fa-square-github text-2xl md:text-3xl mx-2 my-2 hover:scale-125"></i>
-              <i className="fa-brands fa-linkedin text-2xl md:text-3xl mx-2 my-2 hover:scale-125"></i>
+              <i className="fa-brands fa-square-instagram text-2xl md:text-3xl mx-2  hover:scale-125"></i>
+              <i className="fa-brands fa-square-facebook text-2xl md:text-3xl mx-2  hover:scale-125"></i>
+              <i className="fa-brands fa-square-twitter text-2xl md:text-3xl mx-2  hover:scale-125"></i>
+              <i className="fa-brands fa-square-github text-2xl md:text-3xl mx-2  hover:scale-125"></i>
+              <i className="fa-brands fa-linkedin text-2xl md:text-3xl mx-2  hover:scale-125"></i>
             </div>
           </div>
         </div>
