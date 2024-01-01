@@ -1,5 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faJs, faHtml5, faCss3Alt, faReact, faPhp, faNodeJs, faLaravel } from "@fortawesome/free-brands-svg-icons";
+import { faCode, faDatabase } from "@fortawesome/free-solid-svg-icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -10,7 +13,7 @@ const Skill = () => {
   const element = [
     {
       id: "parax1",
-      icon: "fa-square-js",
+      icon: faJs,
       label: "javascript",
       w: "w-10/12",
       color: "text-green-500",
@@ -19,7 +22,7 @@ const Skill = () => {
     },
     {
       id: "parax2",
-      icon: "fa-html5",
+      icon: faHtml5,
       label: "html",
       w: "w-10/12",
       color: "text-green-500",
@@ -28,7 +31,7 @@ const Skill = () => {
     },
     {
       id: "parax3",
-      icon: "fa-css3-alt",
+      icon: faCss3Alt,
       label: "css",
       w: "w-10/12",
       color: "text-blue-500",
@@ -37,7 +40,7 @@ const Skill = () => {
     },
     {
       id: "parax4",
-      icon: "fa-react",
+      icon: faReact,
       label: "react",
       w: "w-8/12",
       color: "text-blue-600",
@@ -46,7 +49,7 @@ const Skill = () => {
     },
     {
       id: "parax5",
-      icon: "fa-php",
+      icon: faPhp,
       label: "php",
       w: "w-6/12",
       color: "text-red-400",
@@ -97,17 +100,16 @@ const Skill = () => {
               <div>
                 {element.map(({ id, icon, label, color, hover, w, rate }) => {
                   return (
-                    <div
-                      data-aos="zoom-in"
-                      data-aos-duration="1000"
-                      className={`grid grid-cols-3`}
-                      key={id}
-                    >
-                      <i
-                        className={`fa-brands ${icon} text-3xl md:text-5xl ${color}  hover:${hover} `}
-                      >
-                        <p className=" text-xs">{label}</p>
+                    <div data-aos="zoom-in" data-aos-duration="1000" className={`grid grid-cols-3`} key={id}>
+                      <i className={`hover:${hover}`}>
+                        <FontAwesomeIcon
+                          icon={icon}
+                          className={`text-3xl md:text-5xl ${color} hover:${hover}`}
+                          aria-label={label}
+                        />
                       </i>
+                      {/* <i className={`fa-brands ${icon} text-3xl md:text-5xl ${color}  hover:${hover} `}></i> */}
+                      {/* <p className=" text-xs">{label}</p> */}
                       <div
                         className={`w-[180px] relative h-2 bg-blue-500 hover:bg-blue-900 my-auto ml-2 paralax-inner`}
                       >
@@ -135,7 +137,9 @@ const Skill = () => {
                   data-aos-duration="1000"
                   className="border rounded-lg shadow-2xl w-[110px] md:p-4 md:w-[180px] transform hover:scale-125"
                 >
-                  <i className="fa-brands fa-node-js text-[55px] md:text-[70px] mx-auto mt-3"></i>
+                  <i className="text-[55px] md:text-[60px] mx-auto mt-3">
+                    <FontAwesomeIcon icon={faNodeJs} />
+                  </i>
                   <p>node js</p>
                 </div>
                 <div
@@ -143,7 +147,9 @@ const Skill = () => {
                   data-aos-duration="1000"
                   className="border rounded-lg bg-gray-800 text-white w-[110px] md:p-4 md:w-[180px]"
                 >
-                  <i className="fa-solid fa-code text-[55px] md:text-[70px] mx-auto mt-3"></i>
+                  <i className="text-[55px] md:text-[60px] mx-auto mt-3">
+                    <FontAwesomeIcon icon={faCode} />
+                  </i>
                   <p>express js</p>
                 </div>
                 <div
@@ -151,7 +157,9 @@ const Skill = () => {
                   data-aos-duration="1000"
                   className="border rounded-lg shadow-2xl w-[110px] md:p-4 md:w-[180px]"
                 >
-                  <i className="fa-solid fa-database text-[55px] md:text-[70px] mx-auto mt-3"></i>
+                  <i className="text-[55px] md:text-[60px] mx-auto mt-3">
+                    <FontAwesomeIcon icon={faDatabase} />
+                  </i>
                   <p>mysql</p>
                 </div>
                 <div
@@ -159,7 +167,9 @@ const Skill = () => {
                   data-aos-duration="1000"
                   className="border rounded-lg bg-gray-800 text-white w-[110px] md:p-4 md:w-[180px]"
                 >
-                  <i className="fa-brands fa-laravel text-[55px] md:text-[70px] mx-auto mt-3"></i>
+                  <i className="text-[55px] md:text-[60px] mx-auto mt-3">
+                    <FontAwesomeIcon icon={faLaravel} />
+                  </i>
                   <p>laravel</p>
                 </div>
               </div>
