@@ -1,6 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebook, faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 import dimas from "../assets/dimas.png";
 
@@ -78,7 +79,10 @@ const About = () => {
               data-aos-duration="1000"
               className="px-2 py-1 md:p-2 mt-[3rem] md:mt-6 bg-white rounded-lg text-black font-semibold hover:text-red-400 ml-4"
             >
-              My CV <i className="fa-solid fa-download hover:text-red-400 delay-[.3s] ease-in"></i>
+              My CV{" "}
+              <i className={`hover:text-red-400 delay-[.3s] ease-in`}>
+                <FontAwesomeIcon icon={faDownload} />
+              </i>
             </button>
             <div data-aos="slide-up" data-aos-duration="1000" className="mt-3">
               <i className="text-2xl md:text-3xl mx-1 md:mx-2">

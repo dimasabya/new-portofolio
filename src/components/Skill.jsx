@@ -17,7 +17,7 @@ const Skill = () => {
       label: "javascript",
       w: "w-10/12",
       color: "text-green-500",
-      hover: "text-green-700",
+      hColor: "text-green-100",
       rate: "90%",
     },
     {
@@ -26,7 +26,7 @@ const Skill = () => {
       label: "html",
       w: "w-10/12",
       color: "text-green-500",
-      hover: "text-green-700",
+      hColor: "text-green-700",
       rate: "90%",
     },
     {
@@ -35,7 +35,7 @@ const Skill = () => {
       label: "css",
       w: "w-10/12",
       color: "text-blue-500",
-      hover: "text-blue-700",
+      hColor: "text-blue-700",
       rate: "90%",
     },
     {
@@ -44,7 +44,7 @@ const Skill = () => {
       label: "react",
       w: "w-8/12",
       color: "text-blue-600",
-      hover: "text-blue-700",
+      hColor: "text-blue-700",
       rate: "80%",
     },
     {
@@ -53,7 +53,7 @@ const Skill = () => {
       label: "php",
       w: "w-6/12",
       color: "text-red-400",
-      hover: "text-red-500",
+      hColor: "text-red-500",
       rate: "60%",
     },
   ];
@@ -98,18 +98,17 @@ const Skill = () => {
           <div className="mt-2 p-2">
             <div className="flex flex-wrap gap-6 md:gap-2 justify-center mt-4 p-2">
               <div>
-                {element.map(({ id, icon, label, color, hover, w, rate }) => {
+                {element.map(({ id, icon, label, color, hColor, w, rate }) => {
                   return (
                     <div data-aos="zoom-in" data-aos-duration="1000" className={`grid grid-cols-3`} key={id}>
-                      <i className={`hover:${hover}`}>
+                      <i className={`${color}`}>
                         <FontAwesomeIcon
                           icon={icon}
-                          className={`text-3xl md:text-5xl ${color} hover:${hover}`}
+                          className={`text-3xl md:text-5xl hover:${hColor}`}
                           aria-label={label}
                         />
+                        <p className="text-sm">{label}</p>
                       </i>
-                      {/* <i className={`fa-brands ${icon} text-3xl md:text-5xl ${color}  hover:${hover} `}></i> */}
-                      {/* <p className=" text-xs">{label}</p> */}
                       <div
                         className={`w-[180px] relative h-2 bg-blue-500 hover:bg-blue-900 my-auto ml-2 paralax-inner`}
                       >

@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -38,7 +40,9 @@ const Contact = () => {
                 onClick={coba}
                 className="border border-black w-10 md:w-16 text-center mt-2 md:mt-4 rounded-lg shadow-lg"
               >
-                <i className="fa-solid fa-arrow-right-long md:text-4xl"></i>
+                <i className="md:text-4xl">
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </i>
               </div>
             </div>
             <div data-aos="zoom-in" data-aos-duration="1000" className="p-2">
@@ -73,7 +77,9 @@ const Contact = () => {
                   className="border rounded-lg p-2 md:my-4 bg-blue-500 hover:bg-blue-700 font-semibold text-white"
                 >
                   Kirim Pesan
-                  <i className="fa-solid fa-paper-plane ml-2"></i>
+                  <i className="ml-2">
+                    <FontAwesomeIcon icon={faPaperPlane} />
+                  </i>
                 </button>
               </form>
             </div>
