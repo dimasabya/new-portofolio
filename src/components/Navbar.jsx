@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -40,17 +42,15 @@ const Navbar = () => {
     >
       <div className="flex flex-wrap justify-around items-center">
         <div className="p-1">
-          <h1
-            data-aos="slide-down"
-            data-aos-duration="1000"
-            className={`text-3xl font-bold ${scrool > 0 ? "" : ""}`}
-          >
+          <h1 data-aos="slide-down" data-aos-duration="1000" className={`text-3xl font-bold ${scrool > 0 ? "" : ""}`}>
             Portofolio
           </h1>
         </div>
         {/* hamburger */}
         <button onClick={toggle} className="block md:hidden text-2xl">
-          <i className="fa-solid fa-bars w-2 h-5"></i>
+          <i className="fa-solid fa-bars w-2 h-5">
+            <FontAwesomeIcon icon={faBars} />
+          </i>
         </button>
         {/* end hamburger */}
         <div
@@ -64,7 +64,9 @@ const Navbar = () => {
             className="flex flex-col justify-stretch gap-12 text-center h-screen w-[280px] bg-white md:w-fit md:bg-transparent md:h-min md:gap-0 md:flex-row"
           >
             <div onClick={toggle} className="relative w-full bg-red-500 md:static md:hidden">
-              <i className="fa-solid fa-x absolute left-2 top-2 md:static"></i>
+              <i className="fa-solid fa-x absolute left-2 top-2 md:static">
+                <FontAwesomeIcon icon={faX} />
+              </i>
             </div>
             <a
               onClick={() => toggle("about")}
