@@ -42,11 +42,7 @@ const Navbar = () => {
     >
       <div className="flex flex-wrap items-center justify-around">
         <div className="p-1">
-          <h1
-            data-aos="slide-down"
-            data-aos-duration="1000"
-            className={`text-3xl font-bold ${scrool > 0 ? "" : ""} text-yellow-500`}
-          >
+          <h1 data-aos="slide-down" data-aos-duration="1000" className={`text-3xl font-bold ${scrool > 0 ? "" : ""}`}>
             Portofolio
           </h1>
         </div>
