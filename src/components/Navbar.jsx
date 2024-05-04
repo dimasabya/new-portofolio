@@ -40,15 +40,19 @@ const Navbar = () => {
         scrool > 0 ? "bg-slate-100 border-b-4 border-slate-50" : "bg-transparent"
       } `}
     >
-      <div className="flex flex-wrap justify-around items-center">
+      <div className="flex flex-wrap items-center justify-around">
         <div className="p-1">
-          <h1 data-aos="slide-down" data-aos-duration="1000" className={`text-3xl font-bold ${scrool > 0 ? "" : ""}`}>
+          <h1
+            data-aos="slide-down"
+            data-aos-duration="1000"
+            className={`text-3xl font-bold ${scrool > 0 ? "" : ""} text-yellow-500`}
+          >
             Portofolio
           </h1>
         </div>
         {/* hamburger */}
-        <button onClick={toggle} className="block md:hidden text-2xl">
-          <i className="fa-solid fa-bars w-2 h-5">
+        <button onClick={toggle} className="block text-2xl md:hidden">
+          <i className="w-2 h-5 fa-solid fa-bars">
             <FontAwesomeIcon icon={faBars} />
           </i>
         </button>
@@ -64,7 +68,7 @@ const Navbar = () => {
             className="flex flex-col justify-stretch gap-12 text-center h-screen w-[280px] bg-white md:w-fit md:bg-transparent md:h-min md:gap-0 md:flex-row"
           >
             <div onClick={toggle} className="relative w-full bg-red-500 md:static md:hidden">
-              <i className="fa-solid fa-x absolute left-2 top-2 md:static">
+              <i className="absolute fa-solid fa-x left-2 top-2 md:static">
                 <FontAwesomeIcon icon={faX} />
               </i>
             </div>
