@@ -87,6 +87,15 @@ const Navbar = () => {
               Skills
             </a>
             <a
+              onClick={() => toggle("skills")}
+              href="#skill"
+              className={`mr-2.5 sm:mr-10  font-semibold hover:text-yellow-400 text-lg hover:underline  ${
+                colorAct === "skills" ? "text-yellow-400" : ""
+              }`}
+            >
+              Projects
+            </a>
+            <a
               onClick={() => toggle("contact")}
               href="#contact"
               className={` font-semibold hover:text-yellow-400 text-lg hover:underline  ${
